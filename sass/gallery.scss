@@ -1,0 +1,233 @@
+/*Base - Desktop*/
+@media (min-width: 626px){
+    .zaglavlje{
+        
+        #empty-space{
+            height: 50px;
+            background: $crvena-boja;
+        }
+        
+        .galerija-zaglavlje-dugme{
+            display: none;
+        }
+}
+    
+    .galerija{
+        width: $desktop-sirina;
+        margin: auto;
+        line-height: 1.5;
+        color: $siva-boja;
+        
+        &-naslov{
+            h2{
+                margin: 0;
+                color: $siva-boja;
+                font-size: 28px;
+                font-weight: 600;
+                margin: 10px 0;
+                
+            }
+        }
+        
+        &-tekst{
+            p{
+                margin: 0;
+                color: $siva-boja;
+                font-size: 18px;
+                margin: 20px 0;
+                
+                &:last-of-type{
+                    margin-bottom: 50px;
+                }
+                
+            }
+        }
+        
+        
+        
+    }
+    
+    .grid{
+        padding: 2vw;
+        background: $svetlosiva-boja;
+        border-radius: 20px;
+
+        h2{
+            font-size: 28px;
+            text-align: center;
+            text-transform: uppercase;
+            margin: 0;
+            margin-bottom: 2vw;
+        }
+    }
+    
+    .grid-container{
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 3vw 5vw;
+
+        img{
+            width: 100%;
+            height: 15vw;
+            transition: 0.5s;
+            border-radius: 20px;
+            
+
+            &:hover{
+                filter: grayscale(100%);
+                transform: scale(1.1);
+
+            }
+        }
+    }
+}
+
+/*Tablet*/
+@media (min-width: 626px) and (max-width: 1023px){
+    .zaglavlje{
+   
+        &-navbar{
+            position: static;
+        }
+        
+        .drop{
+            text-align: right;
+            display: inline-block;
+            
+            .collapse-box{
+                display: none;
+                border: 1px solid white;
+                width: 150px;
+                text-align: center;          
+            }
+
+
+            img{
+                width: 40px;
+                height: 40px;       
+                border: 1px solid white;
+                border-radius: 5px;
+                padding: 1px;
+
+            }
+
+            a{
+                text-decoration: none;
+                color: white;
+                line-height: 1.5;
+                font-size: 24px;
+                display: block;
+                font-weight: 400;
+                padding: 4px 0;
+                margin: 0;
+            }
+        }
+        
+
+        &-navigacija{
+                display: none;
+            
+        }
+    }
+    
+    
+    .grid{
+        padding: 3vw;
+    }
+    
+    .grid-container{
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 3vw 5vw;
+    
+        img{
+            height: 25vw;
+            transition: 1s;
+            
+        }
+    }
+}
+
+/*Mobilni*/
+@media (max-width: 625px){
+    .zaglavlje{
+        
+        #empty-space{
+            height: 50px;
+        }
+        
+        &-navigacija{
+            display: none;
+        }
+
+        .galerija-zaglavlje-poruka{
+            display: none;        
+        }
+    
+        .galerija-zaglavlje-dugme{
+            display: none;
+        }
+    }      
+
+    .galerija{
+        width: $mobilni-sirina;
+        margin: auto;
+        
+        &-naslov{
+
+            h2{
+                color: $siva-boja;
+                font-size: 6vw;
+                font-weight: 400; 
+                margin-top: 7vw;
+                font-weight: 600;
+            }
+        }
+        
+              
+        &-tekst{
+            p{
+                margin: 0;
+                color:$siva-boja;
+                font-size:4vw;
+                line-height: 1.3;
+                margin: 7vw 0;
+            }
+        }     
+    }
+    
+    .grid{
+        background: $svetlosiva-boja;
+        border-radius: 20px;
+        padding: 5vw;
+
+        h2{
+            text-align: center;
+            font-size: 6vw;
+            text-transform: uppercase;
+            color: $siva-boja;
+            margin: 0;
+            margin-bottom: 5vw;
+        }
+
+
+    }
+    
+    .grid-container{
+        display: grid;
+        grid-row-gap: 7vw;
+        grid-template-columns: 1fr;
+
+        img{
+            width: 100%;
+            height: 50vw;
+            transition: 1s;
+            border-radius: 20px;
+
+            &:hover{
+                transform: none;
+            }
+        }
+
+    }
+}

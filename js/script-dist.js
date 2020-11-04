@@ -1,0 +1,1 @@
+$("#glavni-naslov").css("font-size","1vw");

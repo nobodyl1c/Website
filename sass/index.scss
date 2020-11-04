@@ -1,0 +1,976 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/*Base - Desktop*/
+@media (min-width: 626px){
+
+
+    .zaglavlje{
+        background-color: $crvena-boja;
+        color: white;
+
+        padding-top: 50px;
+
+        &-navbar{
+            background-color: $navbar-boja;
+            width: 100%;
+            padding: 25px 0;
+            display: inline-block;
+
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            
+            
+            &-container{
+                width: $desktop-sirina;
+                margin: auto;       
+                display: flex;
+                justify-content: space-between;
+                
+
+
+                
+                 span{
+                    display: none;
+                }
+                
+                h1{
+                    margin: 0;
+                    font-size: 30px;
+                    font-weight: 300;
+                    text-transform: uppercase;
+                    display: inline-block;
+
+                    &:last-child{
+                        font-weight: 600;
+                        margin-left: 5px;
+                    }
+                }  
+            }
+        }
+
+
+
+        &-navigacija{
+            min-width: 475px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 50px;
+            
+
+            a{
+                text-decoration: none;
+                color: white;
+                font-size: 24px;
+                vertical-align: middle;
+                margin: 0;
+                flex-grow: 0;
+                
+
+                &:hover{
+                    color: $crvena-boja;
+                    transition: all 0.2s ease-in;
+                }
+
+                &active{
+                    color: $crvena-boja;
+                }
+            }
+        }
+
+
+
+        &-poruka{
+            display: flex;
+            padding-top: 140px;
+            padding-bottom: 20px;
+
+
+            &-container{
+                width: $desktop-sirina;
+                margin: auto;
+                text-align: center;
+                
+                h1,h2{
+                    font-size: 70px;
+                    line-height: 1.5;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                }
+
+                h2{
+                    font-size: 50px;
+                }
+            } 
+        }
+
+        &-dugme{
+
+            text-align: center;
+            padding: 20px 0 140px 0;
+            margin-bottom: 0;
+
+            a{
+                color: white;
+                background: $navbar-boja; 
+                font-size: 20px;
+                font-weight: 500;   
+                text-decoration: none;
+                text-transform: uppercase;
+                padding: 6px 21px;
+                border-radius: 50px;
+                box-sizing: border-box;
+                text-align: center;
+                transition: all 0.3s;
+
+
+                &:hover{
+                    color:$crvena-boja;
+                    transition: all 0.3s ease-in;
+                }   
+            }        
+        }
+        
+        .drop{
+           display: none;
+        }
+    
+    }
+
+    
+//GLAVNI SADRZAJ----------------------------------------------------------------------------------------------------------
+    .glavni-sadrzaj{
+
+        &-liste{
+            display: flex;
+            justify-content: space-between;
+            width: $desktop-sirina;
+            margin: auto;
+            padding: 60px 0;
+
+            dl{
+                width: 25%;
+            }
+
+            dt{
+                text-align: left;
+                font-size: 24px;
+                color: $siva-boja;
+                display: inline-block;
+                vertical-align: top;
+                padding-left: 5px;
+                vertical-align: middle;    
+            }
+
+            img{
+                width: 24px;
+                height: 24px;
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            dd{
+                color: $siva-boja;
+                font-size: 18px;
+                padding-top: 20px;
+            }
+        }    
+    }
+
+    
+//O-nama------------------------------------------------------------------------------------------------------------------
+    .o-nama{
+        background: $crvena-boja;
+        color: $siva-boja;
+
+
+        &-container{
+            max-width: $desktop-sirina;
+            margin: auto;
+            display: flex;
+            height: 100%;
+
+        }
+
+        &-slika{
+            display: inline-block;
+            vertical-align: middle;
+
+            a{
+                &:last-of-type{
+                    display: none;
+                }
+
+                img{
+                    width: 500px;
+                    height: 100%;   
+                    border-left: 1.7px solid white;
+                    border-right: 1.7px solid white;
+                }
+            }
+        }
+
+        &-tekst{
+            display: inline-block;
+            background: white;
+            vertical-align: middle;
+            height: 80%;
+            margin: auto;
+            margin-left: -20px;
+            padding: 30px;
+
+            h3{
+                font-size: 24px;
+                font-weight: 600;
+                padding-bottom: 10px;
+                margin: 0;
+            }
+
+            p{
+                font-size: 18px;
+                padding: 10px 0;
+                margin: 0;
+
+                &:last-of-type{
+                    font-size: 22px;
+                    margin: 0;
+                }
+            }
+
+
+
+            br{
+                content: ' ';
+            }
+
+
+        }
+    }
+
+    
+//NASE PREDNOSTI----------------------------------------------------------------------------------------------------------
+    #nase-prednosti-naslov{
+            text-align: center;
+            padding: 20px;
+
+            h2{
+                font-size: 30px;
+                color:$siva-boja;
+                font-weight: 600;
+            }
+        }
+    
+    .nase-prednosti{
+        padding: 20px 0;
+
+        &-grid{
+            width: $desktop-sirina;
+            display: grid;
+            margin: auto;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-column-gap: 5%;
+            height: auto;
+            align-self: center;
+
+            img{
+                width: 100%;
+                height: 15vw;
+                transition: 0.5s;
+                border-radius: 30px;
+                outline: 0;
+
+                &:hover{
+                    filter: grayscale(100%);
+                    transform: scale(1.1);
+
+                }
+            }
+
+            p{
+                font-size: 18px;
+                line-height: 1.5;
+                color:$siva-boja;
+            }
+
+            h3{
+                font-size: 24px;
+                margin: 20px 0 15px 0;  
+                color: $siva-boja;
+                font-weight: 600;
+            }
+        }
+    }
+
+    
+//FOOTER------------------------------------------------------------------------------------------------------------------
+    .podnozje{
+        color:white;
+        background-color: $siva-boja;
+        padding: 20px 0;
+        margin-top: 50px;
+
+
+    }
+
+    .info{
+        width: $desktop-sirina;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+
+        &-item{
+            text-align: center;
+        }
+
+
+        div img{
+            display: inline-block;
+            width: 35x;
+            height: 35px;
+            vertical-align: middle;
+        }
+
+
+        div p{
+            margin: 0;
+            font-size: 20px;
+            display: inline-block;
+            padding-left: 5px;
+            vertical-align: middle;
+        }
+
+
+        a{
+            text-decoration: none;
+            color:white;
+            transition: 0.5s;
+
+            &:hover{
+                color: $crvena-boja;
+            }
+        }
+
+    }
+}
+
+/*Tablet*/
+@media (min-width: 626px) and (max-width: 1023px){
+    *{
+    margin: 0;
+    padding: 0;
+    
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+    //ZAGLAVLJE-------------------------------------------------------------------------
+    .zaglavlje{
+        
+        &-navbar{
+            position: static;
+        }
+        
+        .drop{
+            text-align: right;
+            display: inline-block;
+            
+            .collapse-box{
+                display: none;
+                border: 1px solid white;
+                width: 150px;
+                text-align: center;          
+            }
+
+
+            img{
+                width: 40px;
+                height: 40px;       
+                border: 1px solid white;
+                border-radius: 5px;
+                padding: 1px;
+
+            }
+
+            a{
+                text-decoration: none;
+                color: white;
+                line-height: 1.5;
+                font-size: 24px;
+                display: block;
+                font-weight: 400;
+                padding: 4px 0;
+                margin: 0;
+            }
+        }
+        
+
+        &-navigacija{
+                display: none;
+            
+        }
+        
+        .zaglavlje-poruka{
+            padding-top: 60px;
+        }
+        
+        .zaglavlje-dugme{
+            padding-bottom: 60px;
+        }
+        
+        
+    }
+    
+    
+    //GLAVNI SADRZAJ------------------------------------------------------------------------
+    .glavni-sadrzaj{
+    
+        &-liste{
+            flex-direction: column;
+            
+            dl{
+                width: 100%;
+            }
+        }    
+    }
+
+    //O NAMA--------------------------------------------------------
+    .o-nama{
+        
+        .o-nama-container{
+            padding: 40px 0;
+            display: block;
+            .o-nama-slika{
+                display: block;
+                margin-bottom: 20px;
+                
+                a{
+                    display: block;
+                    
+                    &:first-of-type{
+                        display: none;   
+                    }
+                    
+                    
+                    img{
+                        width: 100%;
+                        border: none;
+                    }
+                    
+                }          
+            }
+            
+            .o-nama-tekst{
+                display: block;
+                margin: 0;
+            }   
+        }      
+    }
+    //NASE PREDNOSTI------------------------------------------------
+    .nase-prednosti{
+
+        &-grid{
+
+            grid-template-columns: 1fr 1fr;
+            
+            img{
+                width: 100%;
+                height: 30vw;
+                margin: 0;
+            }
+
+        }
+    }
+
+       
+    
+    
+    
+    //FOOTERR-------------------------------------------------------------------------------
+    .info{
+        display: block;
+        
+    div{
+        text-align: left;
+        padding: 10px 0;
+    }
+    
+    
+}
+    
+
+
+    
+    .zaglavlje{
+        
+        .zaglavlje-navbar-container{
+            width: $desktop-sirina;
+            
+            span{
+                display: block;
+                height: 0;
+            }
+        }
+    }
+    
+    .glavni-sadrzaj-liste{
+        width: $desktop-sirina;
+    }
+    
+    
+    .o-nama{
+        &-container{
+            width: $desktop-sirina;
+        }   
+    }
+
+    .nase-prednosti-grid{
+        width: $desktop-sirina;
+    }
+    
+    .info{
+        width: $desktop-sirina;  
+    }
+
+}
+@media (min-width: 626px) and (max-width: 768px) {
+  
+    
+//NASE PREDNOSTI------------------------------------------------------------------------------------------
+    .nase-prednosti{
+        &-grid{
+            grid-template-columns: 1fr;
+            grid-row-gap: 30px;
+            
+            img{
+                height: auto;
+            }  
+        }
+        
+    }
+     
+//FOOTER----------------------------------------------------------------------------------------------------
+    .podnozje{
+        color:white;
+        background-color: $siva-boja;
+        padding-top: 3vw;
+        margin-top: 8vw;
+
+    }
+
+    
+    .info{
+        display: block;
+        margin: auto;
+    div{
+        
+        padding: 10px 0;
+        text-align: left;
+        
+        img{
+        display: inline-block;
+        width: 35px;
+        height: 35px; 
+        vertical-align: middle;
+
+        }
+        
+        p{
+            margin: 0;
+            font-size: 24px;
+            display: inline-block;
+            padding-left: 5px;
+            line-height: 1.5;
+            vertical-align: middle;       
+        }
+    }
+    
+    
+    a{
+        text-decoration: none;
+        color:white;
+        
+        &:hover{
+            color: $crvena-boja;
+        }
+    }
+     
+    
+}
+    
+    
+  
+}
+
+/*Mobilni*/
+@media (max-width: 625px){
+    *{
+    margin: 0;
+    padding: 0;
+    
+    font-family: 'Roboto Condensed', sans-serif;
+    }
+        
+    //ZAGLAVLJE---------------------------------------------------------------------------------
+    .zaglavlje{
+        background: $crvena-boja;
+        color: white;
+        padding-top: 50px;
+        
+        &-navbar{
+            background-color: $navbar-boja;
+            text-align: center;
+            padding: 25px 0;
+            
+            &-container{
+                width: 85%;
+                margin: auto;
+            }
+        }
+        
+        
+        
+        
+        &-naslov{
+            text-transform: uppercase;
+            line-height: 1.5;
+            
+            span{
+                display: none;
+            }
+            
+            h1{
+                margin: 0;
+                font-size: 7.5vw;
+                font-weight: 300;
+                line-height: 1.5;
+                
+                
+                &:last-child{
+                    font-weight: 600;
+                    margin-bottom: 5px;
+                }
+            }
+        }
+        
+        &-navigacija{
+                display: none;
+        }
+        
+        //DROP MENI----------------------------------------------------------
+        .drop{
+            width: 100%;
+            margin: auto;
+            padding-bottom: 3vw;
+            padding: 0;
+            text-align: center;
+
+            .collapse-box{
+                margin-top: 3vw;
+                display: none;
+                text-align: center;
+                border-radius: 10px;
+                border-top: $border-providan;
+                border-bottom: $border-providan;
+            }
+
+            img{
+                    width: 9vw;
+                    height: 9vw;       
+                    border: $border-providan;
+                    border-radius: 5px;
+                    padding: 1px;
+
+                }
+
+            a{
+                text-decoration: none;
+                border-bottom: $border-providan;
+                color: white;
+                line-height: 1.5;
+                font-size: 4.5vw;
+                display: block;
+                font-weight: 400;
+                padding: 6px 0;
+                margin: 0;
+                text-transform: uppercase;
+                
+                &:last-child{
+                    border: none;
+                }
+                
+            }
+        }
+        
+
+
+
+        &-poruka{
+            text-align: center;
+            padding-top: 60px;
+            width: 85%;
+            margin: auto;
+           
+            
+            h1,h2{
+                display: block;
+                margin: auto;
+                margin-top: 0;
+                margin-bottom: 2vw;
+                line-height: 1.3;
+                text-transform: uppercase;
+                font-weight: 600;
+                
+            }
+            
+            h1{
+                font-size: 15vw;
+            }
+            
+            h2{
+                font-size: 8vw;
+            }
+            
+            
+        
+        }
+
+        &-dugme{
+            text-align: center;
+            padding-bottom: 60px;
+            margin-top: 5vw;
+
+            a{
+                color: white;
+                text-decoration: none;
+                text-transform: uppercase;
+                padding: 0.3em 1.2em;
+                margin: 0 0.3em 0.3m 0;
+                border-radius: 2em;
+                box-sizing: border-box;
+                font-weight: 300;
+                color: white;
+                background: $navbar-boja;
+                text-align: center;
+                transition: all 0.2s;
+
+                font-size: 4vw;
+                font-weight: 500;
+            }        
+        }
+    }
+
+
+    //GLAVNI SADRZAJ-----------------------------------------------------
+    .glavni-sadrzaj{
+
+
+        &-liste{
+            width: 85%;
+            margin: auto;
+            padding: 3vw 0;
+            line-height: 1.5;
+
+            dl{
+                display: block;
+                padding-top: 8vw;
+
+                &:last-of-type{
+                    padding-bottom: 3vw;
+                }
+
+                //text-align: center;
+
+            }
+
+            dt{
+                //text-align: center;
+                //background: $crvena-boja;
+                font-size: 7vw;
+                color: $siva-boja;
+                padding: 1.5vw 0;
+                display: inline-block;
+                vertical-align: baseline;
+                padding-left: 1.5vw;
+                
+                
+            }
+            
+            img{
+                width: 6vw;
+                height: 6vw;
+                display: inline-block;
+                vertical-align: baseline;
+                
+        }
+            
+
+            dd{
+                color:$siva-boja;
+                font-size: 3.5vw;
+                padding: 4vw 0;
+
+            }
+        }    
+    }
+
+
+    .o-nama{
+        background: $crvena-boja;
+        color: $siva-boja;
+        text-align: center;
+        
+        a{
+            &:first-of-type{
+                display: none;
+            }
+            
+            img{
+                padding: 10vw 0 5vw 0;
+                display: block;
+                width: 85vw;
+                margin: auto;
+                height: 100vw;
+            }
+            
+        }
+
+
+
+        &-tekst{
+        
+            width: 85%;
+            margin: auto;
+            line-height: 1.5;
+            padding: 5vw;
+            padding-bottom: 5vw;
+            background: white;
+            margin-bottom: 10vw;
+            display: inline-block;
+            text-align: left;
+            
+
+            h3{
+                font-size: 7vw;
+                padding-bottom: 3vw;
+                font-weight: 600;
+            }
+
+            p{
+                font-size: 4.5vw;
+                
+                &:last-of-type{
+                    font-size: 4.5vw;
+                }
+            }
+            
+            
+        }
+    }
+
+    
+    //NASE PREDNOSTI----------------------------------------------------------
+    .nase-prednosti{
+    padding: 5vw 0;
+    
+    &-grid{
+        width: 85%;
+        margin: auto;
+        color: $siva-boja;
+        
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-gap: 8vw;
+        
+        img{
+            width: 100%;
+            height: 60vw;
+        }
+        
+        p{
+            font-size: 3.5vw;
+            line-height: 1.3;
+        }
+
+        h3{
+            font-size: 6vw;
+            padding: 2vw 0 3vw 0;
+            font-weight: 600;
+            }
+        }
+    }
+    
+    
+    #nase-prednosti-naslov{
+        text-align: center;
+        padding: 5vw 0;
+
+
+        h2{
+            font-size: 7vw;
+            color:$siva-boja;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+    }
+    
+
+
+    //FOOTER----------------------------------------------------------------------------
+    .podnozje{
+        color:white;
+        background-color: $siva-boja;
+        padding-top: 3vw;
+        margin-top: 8vw;
+
+    }
+
+    .info{
+    display: block;
+    padding-bottom: 1vw;
+    width: 85%;
+    margin: auto;
+    
+    div{
+        
+        padding: 1vw 0;
+        
+        img{
+        display: inline-block;
+        width: 7vw;
+        height: 7vw; 
+        vertical-align: middle;
+
+        }
+        
+        p{
+            margin: 0;
+            font-size: 4.5vw;
+            display: inline-block;
+            padding-left: 0.5vw;
+            line-height: 1.5;
+            vertical-align: middle;       
+        }
+    }
+    
+    
+    a{
+        text-decoration: none;
+        color:white;
+        
+        &:hover{
+            color: $crvena-boja;
+        }
+    }
+     
+    
+}
+
+    
+
+}

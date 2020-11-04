@@ -1,0 +1,147 @@
+/*Base - Desktop*/
+@media (min-width: 626px){
+    .materijali-grid{
+        padding: 2vw;
+        background: $svetlosiva-boja;
+        border-radius: 20px;
+        
+        h2{
+            font-size: 28px;
+            //font-weight: 600;
+            text-align: center;
+            text-transform: uppercase;
+            margin: 0;
+            margin-bottom: 2vw;
+        }
+        
+    }
+    
+    
+    .materijali-grid-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 2vw 5vw;
+
+        img{
+            width: 100%;
+            height: 15vw;
+            transition: 0.5s;
+            border-radius: 20px;
+            
+
+            &:hover{
+                filter: grayscale(100%);
+                transform: scale(1.1);
+
+            }
+        }
+    }
+    
+    
+    .materijali-grid-item{
+        h3{
+            font-size: 28px;
+            text-transform: uppercase;
+            margin: 0.8vw 0;
+            font-weight: 600;
+        }
+        
+        p{
+            font-size: 18px;
+            margin: 0;
+        }
+    }
+
+    .img-window{
+        background-color: rgba(0,0,0,0.8);
+        position: fixed;
+        top: 0;
+        left: 0;  
+        z-index: 100;
+    }
+    
+}
+
+/*Tablet*/
+@media (min-width: 626px) and (max-width: 1023px){
+    
+    
+    .materijali-grid{
+        padding: 3vw;
+    }
+    
+    .materijali-grid-container{
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5vw;
+        
+        
+        img{
+            height: 30vw;
+            border-radius: 20px;
+        }
+        
+    }
+}
+
+/*Mobilni*/
+@media (max-width: 625px){
+    
+    .materijali-grid{
+        padding: 5vw;
+        background: $svetlosiva-boja;
+        border-radius: 20px;
+        
+        h2{
+            text-align: center;
+            font-size: 6vw;
+            text-transform: uppercase;
+            color: $siva-boja;
+            margin: 0;
+            margin-bottom: 5vw;
+        }
+    }
+    
+    .materijali-grid-container{
+
+        display: grid;
+        grid-row-gap: 10vw;
+        grid-template-columns: 1fr;
+        
+        
+        img{
+            width: 100%;
+            height: 50vw;
+            border-radius: 20px;
+            transition: 1s;
+        
+            &:hover{
+                transform: none;
+                cursor: pointer;
+            }
+            
+        }
+          
+    }
+    
+    .materijali-grid-item{
+        p{
+            text-align: left;
+            color: $siva-boja;
+            font-weight: 500;
+            padding-top: 2vw;
+            font-size: 4vw;
+            line-height: 1.5;
+        }
+        
+        h3{
+            margin: auto;
+            color: $siva-boja;
+            font-size: 5vw;
+            font-weight: 500;
+            padding-top: 2vw;
+            text-transform: uppercase;
+            font-weight: 600;
+            text-align: left;
+        }
+    }
+}

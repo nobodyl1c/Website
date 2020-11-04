@@ -1,0 +1,312 @@
+/*Base - Desktop*/
+@media (min-width: 626px){
+
+    #map{
+        width: $desktop-sirina;
+        height: 35vw;
+        margin: auto;
+        display: block;
+    }
+    
+    hr{
+        display: none;
+    }
+    
+    .kontakt-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 10vw;
+        width: $desktop-sirina;
+        margin: auto;
+        color: $siva-boja;
+        margin-bottom: 30px;
+        
+         h3{
+            font-size: 28px;
+            font-weight: 400;
+            margin: 25px 0;    
+        }
+
+        
+        
+            .leva-strana{
+                width: 100%;
+               
+
+                #kontakt-paragraf{
+                    margin: 30px 0;           
+                    font-size: 18px;
+                    line-height: 1.5;
+                }
+            
+            
+                .kontakt-info{
+                    white-space: nowrap;
+                    margin: 40px 0;
+                    
+                    
+                    p{
+                        
+                        margin: 0;
+                        margin-left: 5px;
+                        display: inline-block;
+                        font-size: 24px;
+                        font-weight: 300;
+                        vertical-align: middle;
+                    }
+
+                    img{
+                        width: 35px;
+                        height: 35px;
+                        vertical-align: middle;
+                    }
+
+                    a{
+                        text-decoration: none;
+                        color: $siva-boja;
+
+                        &:hover{
+                            color: $crvena-boja;
+                        }
+                    }
+
+                    br{
+                        content: ' ';
+                    }
+                }
+            }
+        
+            .desna-strana{
+                width: 100%;               
+                
+                form{
+                    margin: 30px 0;
+                }
+
+                .forma-polje{
+                    width: 100%;
+                    margin-bottom: 30px;
+                    padding: 10px;
+                    font-size: 18px;
+
+
+                    &::placeholder{
+                        font-size: 18px;
+                    }
+                }
+
+
+                #kontakt-dugme{
+                    margin: 0;
+                    padding: 10px 20px;
+                    
+                    background: $crvena-boja;                    
+                    text-decoration: none;
+                    color: white;
+                    font-size: 16px;
+                    border-radius: 20px;
+                    border: none;
+                    transition: 1s;
+
+                    &:hover{
+                        transform: scale(1.1);
+
+                    }
+
+                }
+
+
+            }
+        
+        
+        
+    }
+    
+    .upload{
+        width: $desktop-sirina;
+        margin: auto;
+        
+        input{
+            width: 50%;
+            
+        }
+    }
+    
+    
+    
+}
+
+/*Tablet*/
+@media (min-width: 625px) and (max-width: 1023px){
+    #map{
+        height: 40vw;
+    
+    }
+    
+    
+    .kontakt-container{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
+    
+    hr{
+        display: block;
+        font-weight: 600;
+    }
+    
+}
+
+/*Mobilni*/
+@media (max-width: 625px){
+    #map{
+        width: 85%;
+        height: 85vw;
+        margin: auto;
+        display: block;
+        
+        margin-bottom: 5vw;
+    }
+    
+    .galerija-zaglavlje{
+        margin-bottom: 0vw;
+    }
+    
+    .kontakt-container{
+        width: 85%;
+        margin: auto;
+        color: $siva-boja;
+        padding: 5vw 0;
+        //background: purple;
+            
+            
+        h3{
+            font-size: 6vw;
+            padding: 5vw 0;
+            font-weight: 400;
+            //font-variant: small-caps;
+            //border: 1px solid red; 
+        }
+        
+        .leva-strana{
+            width: 100%;
+            //background: purple
+
+            #kontakt-paragraf{
+                color: $siva-boja;
+                padding: 3vw 0 5vw 0;
+                font-size: 4vw;
+                line-height: 1.3;
+                font-weight: 300;
+                //border: 1px solid red; 
+            }
+
+
+
+            .kontakt-info{  
+                //KONTAKT INFORMACIJE -----------------------------------
+                //border: 1px solid red; 
+                
+                
+                p{
+                    display: inline-block;
+                    font-size: 5vw;
+                    font-weight: 300;
+                    vertical-align: middle;
+                    padding-left: 0.5vw;
+                    //border: 1px solid red;
+                    line-height: 1.5;
+                    
+                }
+                
+                img{
+                    display: inline-block;
+                    vertical-align: middle;
+                    
+                }
+                
+                
+                a{
+                    text-decoration: none;
+                    color: $siva-boja;
+                }
+                
+                
+                //SLIKE ------------------------------------------------
+                             
+                
+
+                #telefon-slika2{
+                    width: 10vw;
+                    height: 10vw;
+                }
+
+                #mail-slika2{
+                    width: 10vw;
+                    height: 10vw;
+                }
+
+                #lokacija-slika2{
+                    width: 10vw;
+                    height: 10vw;
+                    
+                }
+            }
+        }
+        
+        
+        
+        .desna-strana{
+            width: 100%;
+
+            
+            .forma-polje{
+                width: 99.5%;
+                margin: 3vw 0;
+                padding: 3vw 0;
+                font-size: 4vw;
+                
+                &::placeholder{
+                    font-size: 4.5vw;
+                }
+                
+                
+            }
+            
+            
+            
+            #kontakt-dugme{
+                margin: 0;
+                padding: 10px 20px;
+
+                background: $crvena-boja;                    
+                text-decoration: none;
+                color: white;
+                font-size: 4vw;
+                border-radius: 20px;
+                border: none;
+                transition: 1s;
+
+                &:hover{
+                    transform: scale(1.1);
+
+                }
+
+            }
+            
+            
+        }
+        
+        
+        
+        
+            
+            
+            
+        }
+        
+        
+        
+
+
+}
